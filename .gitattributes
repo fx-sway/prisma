@@ -5,3 +5,6 @@
 *.svg linguist-language=TypeScript
 *.css linguist-language=TypeScript
 *.js linguist-language=TypeScript
+*.jsx linguist-language=TypeScript
+*.mjs linguist-language=TypeScript
+*.cjs linguist-language=TypeScript
