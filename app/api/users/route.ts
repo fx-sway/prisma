@@ -1,8 +1,8 @@
-import prisma from "@/utils/prisma";
-import { NextRequest, NextResponse } from "next/server";
+import prisma from '@/utils/prisma';
+import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(request: NextRequest): Promise<NextResponse> {
-  const lookupId = request.nextUrl.searchParams.get("user_id");
+  const lookupId = request.nextUrl.searchParams.get('user_id');
 
   if (lookupId) {
     const existingUser = await prisma.user.findFirst({
@@ -21,7 +21,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
     return NextResponse.json({
       success: false,
-      message: "Пользователь с указанным идентификатором не существует",
+      message: 'Пользователь с указанным идентификатором не существует',
       payload: null
     });
   }
